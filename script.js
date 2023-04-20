@@ -215,4 +215,150 @@
 
 // console.log(studentsList); // output of the final list in the array
 
+/* 
+    Instructions:
+
+    1. Compute the average grade of each student object.
+    2. Add the computed average of the student as a value to a new property called average to the studentGrades array of objects.
+    3. Log the modified object array (including the average property) to the console.
+
+    Stretch Goals:
+    - Round off the average into a single decimal number.
+      Note: Value for average property cannot be a string.
+*/
+
+
+// const studentGrades = [
+// 	{ 
+//         studentId: 1, 
+//         Q1: 89.3, 
+//         Q2: 91.2, 
+//         Q3: 93.3, 
+//         Q4: 89.8
+//     },
+// 	{ 
+//         studentId: 2, 
+//         Q1: 69.2, 
+//         Q2: 71.3, 
+//         Q3: 76.5, 
+//         Q4: 81.9 
+//     },
+// 	{ 
+//         studentId: 3, 
+//         Q1: 95.7, 
+//         Q2: 91.4, 
+//         Q3: 90.7, 
+//         Q4: 85.6 
+//     },
+// 	{ 
+//         studentId: 4, 
+//         Q1: 86.9, 
+//         Q2: 74.5, 
+//         Q3: 83.3, 
+//         Q4: 86.1 
+//     },
+// 	{
+//         studentId: 5, 
+//         Q1: 70.9, // [propertyName]: [propertyValue]
+//         Q2: 73.8, 
+//         Q3: 80.2, 
+//         Q4: 81.8 
+//     }
+// ];
+
+
+// studentGrades.forEach(student => {
+//     let gradeSum = 0;
+//     let gradeCount = 0;
+
+//     for (const propertyName in student) {
+//         if (propertyName !== 'studentId') {
+//             const grade = student[propertyName];
+
+//             gradeSum += grade;
+
+//             gradeCount++;
+//         }
+//     }
+    
+//     const gradeAverage = gradeSum / gradeCount;
+
+//     student.average = +gradeAverage.toFixed(1);
+// });
+
+// console.log(studentGrades);
+
+
+
+
+// let people = [
+//     {
+//         name: 'Bob',
+//         age: 40,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'John',
+//         age: 30,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Jane',
+//         age: 25,
+//         gender: 'female'
+//     }
+// ];
+
+// 1. Add a new person object to the people array.
+
+// people.push({
+//     name: 'Kimbo',
+//     age: 20,
+//     gender: 'male'
+// });
+
+// console.log(people);
+
+// 2. Remove the person object with the name "John" from the people array.
+
+// const removedPerson = people.filter(person => person.name === 'John');
+
+// console.log(removedPerson);
+
+// 3. Sort the people array by age, from oldest to youngest.
+
+// people.sort((person1, person2) => person2.age - person1.age);
+
+// console.log(people);
+
+// 4. Find the first-person object in the people array with an age greater than or equal to 30.
+
+// const person = people.find(person => person.age >= 30);
+
+// console.log(person);
+
+/*
+    Instructions:
+    1. Calculate the weight based on the user input in kilograms (kg).
+    2. Create a function that displays the converted weight in pounds.
+    3. Execute the function property based on the initialized object with arguments.
+*/
+// 2.20462
+
+// convertWeight = (person) => {
+//     const lbs = person.weight * 2.20462;
+//     console.log(`${person.name}'s weight in lbs is ${lbs.toFixed(2)} lbs`);
+// }
+
+// const person = {
+//     name: 'Kimbo',
+//     weight: 75,
+// };
+
+// convertWeight(person);
+
+
+
+
+
 
