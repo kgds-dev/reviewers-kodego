@@ -273,7 +273,7 @@
 
 //     for (const propertyName in student) {
 //         if (propertyName !== 'studentId') {
-//             const grade = student[propertyName];
+//             const grade = student[propertyName]; // value of the property
 
 //             gradeSum += grade;
 
@@ -358,7 +358,54 @@
 // convertWeight(person);
 
 
+// var getDivisionId = document.getElementById('test-id');
+// var getBtnClasses = document.getElementsByClassName('btn-class-name');
+// console.log(getClasses);
+
+// // if (getClasses[0].attributes[0].nodeValue === 'btn-id-1') {
+// //   getClasses[0].onclick = function() {
+// //     alert('CLICKED');
+// //   }    
+// // }
+
+// getElement.style.color = 'red';
+// getElement.style.fontSize = '120px';
+
+// getClasses[0].classList.add('new-class-name');
+
+// console.log(getClasses[0].classList[3]);
+
+// const names = ['Kimbo', 'Graham', 'Sanz'];
+
+// getNames = (buttonClassName) => {
+//   console.log(buttonClassName);
+// }
 
 
+// if (getClasses[0].classList[3] === 'new-class-name') {
+//   getClasses[0].onclick = () => {
+//     getNames(getClasses[0].classList[3]);
+//   }
+// }
+
+// const createElement = document.createElement('button');
+
+// createElement.className = 'new-btn';
+// createElement.onclick = () => {
+//   console.log(names);
+// }
+// createElement.innerHTML = 'click me to show names';
+
+// getElement.appendChild(createElement);
 
 
+// addTableRow = () => {
+//   const getTable = document.getElementById('personal-table');
+
+//   const newRow = getTable.insertRow(-1);
+//   const cell1 = newRow.insertCell(0);
+//   const cell2 = newRow.insertCell(1);
+
+//   cell1.innerHTML = 'Cell 1';
+//   cell2.innerHTML = 'Cell 2';
+// }
