@@ -160,7 +160,7 @@
 //     const isStudentEnrollee = checkEnrollee(studentName, enrolledStudents);
 
 //     if (isStudentEnrollee) {
-//         console.log(`${studentName} is found on the list`);
+//         console.log(`${studentName} is an enrollee`);
 //     } else {
 //         console.log(`${studentName} is not found on the list`);
 //     }
