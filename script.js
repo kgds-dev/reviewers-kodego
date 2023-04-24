@@ -409,3 +409,130 @@
 //   cell1.innerHTML = 'Cell 1';
 //   cell2.innerHTML = 'Cell 2';
 // }
+
+// EXERCISE 1
+// function Car (brand, model, year, color, mileage, price) {
+//   this.brand = brand;
+//   this.model = model;
+//   this.year = year;
+//   this.color = color;
+//   this.mileage = mileage;
+//   this.price = price;
+// }
+
+// const car1 = new Car('Honda', 'Civic', 2018, 'Black', 20000, 15000);
+// const car2 = new Car('Toyota', 'Hilux', 2022, 'Red', 10000, 18000);
+// const car3 = new Car('Ford', 'Raptor', 2018, 'Blue', 5000, 30000);
+
+// getAveragePrice = (cars) => {
+//   let total = 0;
+
+//   cars.forEach(car => total += car.price);
+
+//   return total / cars.length;
+// }
+
+// const cars = [car1, car2, car3]; //[{..}, {..}, {..}]
+
+// const averagePrice = getAveragePrice(cars);
+
+// console.log(`The average of all the prices is: ${averagePrice}`);
+
+
+// EXERCISE 2
+// function Book (title, author, pages, year, genre) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.year = year;
+//   this.genre = genre;
+// }
+
+// const book1 = new Book("Angels and Demons", "Dan Brown", 768, 2000, "Thriller");
+// const book2 = new Book("Bird Box", "Josh Malerman", 273, 2014, "Thriller");
+// const book3 = new Book("Smaller and Smaller Circles", "F. H. Batacan", 155, 2002, "Crime");
+
+// const collectionOfBooks = [book1, book2, book3];
+
+// // books = array of objects, genre = specific genre (string)
+// filterBooksByGenre = (books, genre) => {
+//   const filteredBooks = [];
+
+//   books.forEach(book => {
+//     if (book.genre === genre) {
+//       filteredBooks.push(book.title);
+//     }
+//   });
+
+//   return filteredBooks;
+// }
+
+// const filteredBookPerGenre = filterBooksByGenre(collectionOfBooks, 'Comedy');
+// console.log(filteredBookPerGenre);
+
+
+
+// EXERCISE 3
+// const cart = [
+//   { name: "Shirt", price: 20, quantity: 2 },
+//   { name: "Pants", price: 30, quantity: 5 },
+//   { name: "Socks", price: 5, quantity: 7 },
+//   { name: "Hat", price: 40, quantity: 8 },
+//   { name: "Shoes", price: 70, quantity: 10 }
+// ];
+
+
+// calculateTotalCost = (cart) => {
+//   let total = 0;
+
+//   cart.forEach(item => total += (item.price * item.quantity));
+
+//   return total;
+// }
+
+// const totalCost = calculateTotalCost(cart);
+
+// console.log(`Total Cost: ${totalCost}`)
+
+// getItem = (cart) => {
+//   const items = [];
+
+//   cart.map(item => item.quantity > 5 && item.price >= 20 ? items.push(item) : '');
+
+//   return items;
+// }
+
+// console.log(getItem(cart));
+
+// EXERCISE 4
+// const students = [
+//   { name: "Kelly", grades: [78, 92, 85, 88] },
+//   { name: "Jared", grades: [90, 86, 94, 89] },
+//   { name: "Aloi", grades: [72, 84, 80, 75] },
+//   { name: "Alvin", grades: [68, 72, 65, 70] }
+// ];
+
+// calculateStudentGradeAverage = (students) => {
+//   const averageGrades = [];
+
+//   // loop over students array
+//   students.forEach(student => {
+
+//     // calculate sum of grades
+//     const sum = student.grades.reduce((total, grade) => total + grade);
+
+//     // compute grades in average
+//     const gradeInAverage = sum / student.grades.length;
+
+//     averageGrades.push({
+//       name: student.name,
+//       averageGrade: +gradeInAverage.toFixed(2),
+//     });
+//   });
+
+//   return averageGrades;
+// }
+
+// const newStudentArray = calculateStudentGradeAverage(students);
+
+// console.log(newStudentArray);
