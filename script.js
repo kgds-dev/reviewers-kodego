@@ -653,3 +653,8 @@ IF NUMBER IN BUTTON 1 IS DIVISIBLE BY 3 AND 5 SHOW 'FIZZBUZZ' IN BUTTON2
 
 //   btn1.textContent = num.toString();
 // }
+
+setRadioState = (checked) => {
+    const radios = document.querySelectorAll('.radio-button');
+    radios.forEach(button => button.checked = checked);
+}
