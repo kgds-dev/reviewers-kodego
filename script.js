@@ -654,7 +654,88 @@ IF NUMBER IN BUTTON 1 IS DIVISIBLE BY 3 AND 5 SHOW 'FIZZBUZZ' IN BUTTON2
 //   btn1.textContent = num.toString();
 // }
 
-setRadioState = (checked) => {
-    const radios = document.querySelectorAll('.radio-button');
-    radios.forEach(button => button.checked = checked);
+// setRadioState = (checked) => {
+//     const radios = document.querySelectorAll('.radio-button');
+//     radios.forEach(button => button.checked = checked);
+// }
+
+
+// Technical Assessment 4 coding part
+
+// Problem 1
+
+// const passwordField = document.getElementById('password-field');
+// const confirmPasswordField = document.getElementById('confirm-password-field');
+
+// passwordValidate = () => {
+//     if (passwordField.value !== confirmPasswordField.value) {
+//         confirmPasswordField.setCustomValidity('Password Does not Match');
+//     } else if (!passwordField.value || !confirmPasswordField.value) {
+//         alert('Fields cannot be empty');
+//     } else {
+//         alert('You have entered the correct password match');
+//     }
+// }
+
+
+// Problem 2
+const form = document.getElementById('registration-form');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const firstName = form.elements.firstName.value;
+    const lastName = form.elements.lastName.value;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
+
+    // clear error messages
+    firstNameError.textContent = '';
+    lastNameError.textContent = '';
+    emailError.textContent = '';
+    passwordError.textContent = '';
+
+    const errors = {};
+
+    if (!firstName) {
+        errors.firstName = 'Please enter your first name';
+    }
+    if (!lastName) {
+        errors.lastName = 'Please enter your last name';
+    }
+    if (!email) {
+        errors.email = 'Please enter your email';
+    }
+    if (!password) {
+        errors.password = 'Please enter your password';
+    }
+
+    if (Object.keys(errors).length > 0) {
+        displayErrors(errors);
+        return;
+    }
+
+    const formData = { // imagine that this is the request payload
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password
+    };
+
+    displaySuccess(formData);
+    form.reset();
+});
+
+
+displayErrors = errors => {
+    for (const fields in errors) {
+        const errorMessage = errors[fields];
+        const errorElement = document.getElementById(fields + 'Error');
+        errorElement.textContent = errorMessage;
+    }
 }
+
+displaySuccess = (data) => { // imagine this function is the one responsible for sending request into your created server.
+    console.log(data);
+}
+

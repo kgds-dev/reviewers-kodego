@@ -39,14 +39,53 @@
     <!-- <button id="button-1">0</button>
     <button id="button-2">Neutral</button> -->
     
-    <input class="radio-button" type="radio">
+    <!-- <input class="radio-button" type="radio">
     <input class="radio-button" type="radio">
     <input class="radio-button" type="radio">
 
     <div class="button-container" style="margin-top: 15px;">
         <button onclick="setRadioState(true)">Check All</button>
         <button onclick="setRadioState(false)">Uncheck All</button>
-    </div>
+    </div> -->
+
+    <!-- <form>
+        <fieldset>
+            <legend>Confirm Password Form</legend>
+            <input type="password" placeholder="Password" id="password-field" required>
+            <input type="password" placeholder="Confirm Password" id="confirm-password-field" required>
+
+            <button type="submit" onclick="passwordValidate()">Confirm</button>
+        </fieldset>
+    </form> -->
+
+    <!-- Technical Assessment 4 Problem 2 -->
+
+    <h1>Registration Form</h1>
+
+    <form id="registration-form">
+        <div class="field-container">
+            <label for="firstName">First Name:</label>
+            <input name="firstName" type="text" id="firstName" placeholder="Enter your first name">
+            <span class="error" id="firstNameError"></span>
+        </div>
+        <div class="field-container">
+            <label for="lastName">Last Name:</label>
+            <input name="lastName" type="text" id="lastName" placeholder="Enter your last name">
+            <span class="error" id="lastNameError"></span>
+        </div>
+        <div class="field-container">
+            <label for="email">Email:</label>
+            <input name="email" type="email" id="email" placeholder="Enter your email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+        <div class="field-container">
+            <label for="password">Password:</label>
+            <input name="password" type="password" id="password" placeholder="Enter your password">
+            <span class="error" id="passwordError"></span>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
 
     <script src="script.js"></script>
 </body>
