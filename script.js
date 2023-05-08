@@ -715,14 +715,33 @@ form.addEventListener('submit', (event) => {
         return;
     }
 
-    const formData = { // imagine that this is the request payload
+    const formData = {
         firstName: firstName,
         lastName: lastName,
         email: email,
         password: password
     };
 
-    displaySuccess(formData);
+    fetch('http://localhost:3000/users/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+
     form.reset();
 });
 
@@ -734,8 +753,3 @@ displayErrors = errors => {
         errorElement.textContent = errorMessage;
     }
 }
-
-displaySuccess = (data) => { // imagine this function is the one responsible for sending request into your created server.
-    console.log(data);
-}
-
