@@ -3,7 +3,7 @@
 } */
 
 
-body {
+/* body {
     font-family: Arial, sans-serif;
     padding: 20px;
 }
@@ -68,4 +68,11 @@ button[type="submit"]:hover {
 
 .field-container {
     margin-bottom: 20px;
+} */
+
+
+#cart {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
