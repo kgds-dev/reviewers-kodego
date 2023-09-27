@@ -679,119 +679,121 @@ IF NUMBER IN BUTTON 1 IS DIVISIBLE BY 3 AND 5 SHOW 'FIZZBUZZ' IN BUTTON2
 
 
 // Problem 2
-// const form = document.getElementById('registration-form');
+const form = document.getElementById('registration-form');
 
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault();
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-//     const firstName = form.elements.firstName.value;
-//     const lastName = form.elements.lastName.value;
-//     const email = form.elements.email.value;
-//     const password = form.elements.password.value;
+    const firstName = form.elements.firstName.value;
+    const lastName = form.elements.lastName.value;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
 
-//     // clear error messages
-//     firstNameError.textContent = '';
-//     lastNameError.textContent = '';
-//     emailError.textContent = '';
-//     passwordError.textContent = '';
+    // clear error messages
+    firstNameError.textContent = '';
+    lastNameError.textContent = '';
+    emailError.textContent = '';
+    passwordError.textContent = '';
 
-//     const errors = {};
+    const errors = {};
 
-//     if (!firstName) {
-//         errors.firstName = 'Please enter your first name';
-//     }
-//     if (!lastName) {
-//         errors.lastName = 'Please enter your last name';
-//     }
-//     if (!email) {
-//         errors.email = 'Please enter your email';
-//     }
-//     if (!password) {
-//         errors.password = 'Please enter your password';
-//     }
+    if (!firstName) {
+        errors.firstName = 'Please enter your first name';
+    }
+    if (!lastName) {
+        errors.lastName = 'Please enter your last name';
+    }
+    if (!email) {
+        errors.email = 'Please enter your email';
+    }
+    if (!password) {
+        errors.password = 'Please enter your password';
+    }
 
-//     if (Object.keys(errors).length > 0) {
-//         displayErrors(errors);
-//         return;
-//     }
+    if (Object.keys(errors).length > 0) {
+        displayErrors(errors);
+        return;
+    }
 
-//     const formData = {
-//         firstName: firstName,
-//         lastName: lastName,
-//         email: email,
-//         password: password
-//     };
+    const formData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password
+    };
 
-//     fetch('http://localhost:3000/users/signup', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(formData)
-//     })
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error('Network response was not ok');
-//         }
-//         return response.json();
-//     })
-//     .then(data => {
-//         console.log(data);
-//     })
-//     .catch(error => {
-//         console.error('There was a problem with the fetch operation:', error);
-//     });
+    fetch('http://localhost:3000/users/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
 
-//     form.reset();
-// });
-
-
-// displayErrors = errors => {
-//     for (const fields in errors) {
-//         const errorMessage = errors[fields];
-//         const errorElement = document.getElementById(fields + 'Error');
-//         errorElement.textContent = errorMessage;
-//     }
-// }
-
-
-const addToCartButton = document.getElementById("add-to-cart");
-
-addToCartButton.addEventListener("click", function() {
-  const cartItem = new cartItems("Product Name", 99.99);
-
-  addToCart(cartItem);
+    form.reset();
 });
 
 
-function cartItems(name, price) {
-    this.name = name;
-    this.price = price;
+displayErrors = errors => {
+    for (const fields in errors) {
+        const errorMessage = errors[fields];
+        const errorElement = document.getElementById(fields + 'Error');
+        errorElement.textContent = errorMessage;
+    }
 }
 
-const cart = [];
 
-function addToCart(item) {
-  cart.push(item);
-  updateCart();
-}
+// const addToCartButton = document.getElementById("add-to-cart");
 
-// Function to update the cart display
-function updateCart() {
-  const cartContainer = document.getElementById("cart");
+// addToCartButton.addEventListener("click", function() {
+//   const cartItem = new cartItems("Product Name", 99.99);
 
-  // Check if the cart container element exists
-  if (!cartContainer) {
-    return;
-  }
+//   addToCart(cartItem);
+// });
 
-  // Clear the cart container
-  cartContainer.innerHTML = "";
 
-  cart.forEach(function(item) {
-    const cartItemElement = document.createElement("div");
-    cartItemElement.innerText = item.name + " - $" + item.price;
+// function cartItems(name, price) {
+//     this.name = name;
+//     this.price = price;
+// }
 
-    cartContainer.appendChild(cartItemElement);
-  });
-}
+// const cart = [];
+
+// function addToCart(item) {
+//   cart.push(item);
+//   updateCart();
+// }
+
+// // Function to update the cart display
+// function updateCart() {
+//   const cartContainer = document.getElementById("cart");
+
+//   // Check if the cart container element exists
+//   if (!cartContainer) {
+//     return;
+//   }
+
+//   // Clear the cart container
+//   cartContainer.innerHTML = "";
+
+//   cart.forEach(function(item) {
+//     const cartItemElement = document.createElement("div");
+//     cartItemElement.innerText = item.name + " - $" + item.price;
+
+//     cartContainer.appendChild(cartItemElement);
+//   });
+// }
+
+
